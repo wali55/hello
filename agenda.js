@@ -38,4 +38,6 @@ Whole backend:
 Pipeline: Request - Middleware[logger, body parser, file parser, user ip, blog ip, authentication, authorization, validation] - Controller(Business Logic) - Middleware[error handler] - Response
 
 Invalid req cannot be able to go to the business logic and if it needs to go then process them before sending them to business logic. For this reason we need middleware.
+
+Now we are doing expressjs playlist.
 */
