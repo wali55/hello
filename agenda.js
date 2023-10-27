@@ -41,4 +41,16 @@ Invalid req cannot be able to go to the business logic and if it needs to go the
 
 Now we are doing expressjs playlist.
 Now we are doing expressjs playlist also.
+
+Todays tasks:
+------------
+- Middleware
+- Project Structure
+- Project
+
+What is Middleware?
+
+- Middleware is just a controller function. Reuseable controller functions are middlewares.
+Req -> M1 -> M2 -> M3 -> Controller -> Res
+Middlewaer function must call next() or send back res else it does not know what to do next.
 */

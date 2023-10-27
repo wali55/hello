@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
 server.listen(8000, () => {
     console.log('server is listening at port 8000');
 });
-*/
+
 
 const express = require('express');
 
@@ -82,4 +82,23 @@ app.post('/books', (req, res) => {
 
 app.listen(8000, () => {
     console.log('server is running on port 8000');
+});
+
+*/
+
+const express = require('express');
+
+const app = express();
+
+const simpleLogger = (req, res, next) => {
+    console.log(`${req.url} - ${req.method} - ${new Date().toISOString()}`);
+    res.send();
+}
+
+app.get('/hello', simpleLogger, (req, res, next) => {
+    res.json({message: 'hello'});
+});
+
+app.listen(8000, () => {
+    console.log('App is running on port 8000');
 });
